@@ -1,0 +1,54 @@
+.logo {
+}
+
+.navlinks {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.container {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  padding: 4rem;
+}
+
+.logo-nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 10rem;
+}
+.container a {
+  display: flex;
+  align-items: center;
+
+  gap: 1.4rem;
+  background-color: rgba(238, 238, 238, 0.48);
+  color: #666;
+  font-weight: 500;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  padding: 2rem 6rem 2rem 6rem;
+  transition: all 0.3s;
+}
+
+.container a:hover,
+.container a:active {
+  background-color: #ccc;
+  color: #444;
+}
+
+.container a.active {
+  background-color: #1174e3;
+  color: #fff;
+}
+
+.container svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}

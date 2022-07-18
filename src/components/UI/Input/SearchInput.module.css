@@ -1,0 +1,47 @@
+.input-box {
+  display: flex;
+  align-items: stretch;
+  gap: 0rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.input-box button {
+  width: 50px;
+  background-color: #1174e3;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.input-box button:hover {
+  background-color: #0d54a5;
+}
+
+.input-box button svg {
+  width: 24px;
+  height: 24px;
+  color: #eee;
+}
+
+.input-box label {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #777;
+}
+
+.input-box input {
+  display: block;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 2px #88baf1;
+  background-color: #eee;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+}
+
+.input-box input:hover,
+.input-box input:focus {
+  outline: none;
+  background-color: rgba(238, 238, 238, 0.411);
+  border-bottom: solid 2px #1174e3;
+}

@@ -1,0 +1,13 @@
+.assign-btn {
+  padding: 0.8rem;
+  background-color: #1174e3;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.assign-btn:hover {
+  background-color: #0d54a5;
+}

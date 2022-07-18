@@ -1,0 +1,18 @@
+.Register-btn {
+  padding: 0.8rem;
+  background-color: #4bb543;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.Register-btn:hover {
+  background-color: #368b30;
+}
+
+.Register-btn svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}

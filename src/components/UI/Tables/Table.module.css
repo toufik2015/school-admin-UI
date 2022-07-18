@@ -1,0 +1,47 @@
+.styled-table {
+  width: 100%;
+  font-size: 1.3rem;
+  border-collapse: collapse;
+}
+
+th div {
+  display: flex;
+
+  gap: 1rem;
+}
+th {
+  vertical-align: middle;
+  background-color: #1174e3;
+  color: #fff;
+}
+
+th,
+td {
+  padding: 2rem 3rem 2rem 2rem;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(221, 221, 221, 0.401);
+}
+
+.group-btn {
+  display: flex;
+  gap: 1rem;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.table-attributes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table-actions {
+  display: flex;
+  gap: 1rem;
+}

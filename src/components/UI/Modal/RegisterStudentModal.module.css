@@ -1,0 +1,10 @@
+.registeration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.form-btns {
+  display: flex;
+  gap: 1rem;
+}

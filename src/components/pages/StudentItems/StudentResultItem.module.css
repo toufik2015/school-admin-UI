@@ -1,0 +1,44 @@
+/* .result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 1.4rem 2rem;
+  font-size: 1.6rem;
+  position: relative;
+}
+.result-item:nth-child(even) {
+  background-color: #eee;
+}
+
+.result-item span {
+  overflow-wrap: break-word;
+  justify-self: flex-start;
+  width: 15rem;
+}
+
+.group-btn {
+  display: flex;
+  gap: 0.8rem;
+} */
+
+.styled-table {
+  width: 100%;
+  font-size: 1.3rem;
+  border-collapse: collapse;
+}
+
+/* th,
+td {
+  padding: 1rem 3rem 1rem 2rem;
+  text-align: left;
+} */
+
+/* tr:nth-child(even) {
+  background-color: #ddd;
+} */
+
+.group-btn {
+  display: flex;
+  gap: 1rem;
+}

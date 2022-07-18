@@ -1,0 +1,46 @@
+.confirm-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.confirm-btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.confirm-btns button {
+  padding: 1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-btns svg {
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
+}
+
+.confirm-btn {
+  background-color: #4bb543;
+  border: none;
+  border-radius: 5px;
+}
+.cancel-btn {
+  background-color: #ef4e4e;
+  border: none;
+  border-radius: 5px;
+}
+
+.cancel-btn:hover {
+  background-color: #b53131;
+}
+
+.confirm-btn:hover {
+  background-color: #368b30;
+}

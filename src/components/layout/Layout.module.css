@@ -1,0 +1,26 @@
+.layout {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr;
+  gap: 2rem;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  grid-row: 1/-1;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+header {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+main {
+  background-color: #fff;
+  border-radius: 5px;
+}
