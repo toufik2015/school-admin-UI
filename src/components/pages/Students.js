@@ -14,6 +14,7 @@ import { uiActions } from "../../store/ui-slice";
 import { studentsActions } from "../../store/students-slice";
 import { deleteStudentDb } from "../../store/students-slice";
 import RegisterStudentModal from "../UI/Modal/RegisterStudentModal";
+import EnrollModal from "../UI/Modal/EnrollModal";
 
 const Students = () => {
   const dispatch = useDispatch();
@@ -44,6 +45,7 @@ const Students = () => {
 
   return (
     <div className={classes.container}>
+      <EnrollModal />
       {StudentRegisterModalShow && (
         <RegisterStudentModal
           onSubmit={submitStudentFormHandler}
