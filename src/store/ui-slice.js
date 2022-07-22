@@ -6,6 +6,7 @@ const uiSlice = createSlice({
     showLoader: false,
     showDltStudentModal: false,
     showStudentRegisterModal: false,
+    showEnrollStudentModal: false,
   },
   reducers: {
     toggleLoader(state) {
@@ -17,6 +18,9 @@ const uiSlice = createSlice({
     },
     toggleStudentRegisterModal(state) {
       state.showStudentRegisterModal = !state.showStudentRegisterModal;
+    },
+    toggleStudentEnrollModal(state) {
+      state.showEnrollStudentModal = !state.showEnrollStudentModal;
     },
   },
 });

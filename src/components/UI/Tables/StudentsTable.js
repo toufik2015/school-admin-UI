@@ -1,6 +1,9 @@
 import React, { useMemo, useEffect, Fragment } from "react";
 
-import { fetchStudentsData } from "../../../store/students-slice";
+import {
+  fetchStudentsData,
+  fetchOneStudent,
+} from "../../../store/students-slice";
 import { useTable, useSortBy, useGlobalFilter } from "react-table";
 import { useSelector, useDispatch } from "react-redux";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -24,8 +27,16 @@ const StudentsTable = (props) => {
 
   const showDltStudentModalHandler = (e) => {
     const studentId = e.target.dataset.id;
-    dispatch(studentsActions.setStudentDltId(studentId));
+    dispatch(studentsActions.setStudentId(studentId));
     dispatch(uiActions.toggleStudnetDltModal());
+  };
+
+  const showEnrollModalHandler = (e) => {
+    const studentId = e.target.dataset.id;
+    console.log(studentId);
+    dispatch(studentsActions.setStudentId(studentId));
+    dispatch(uiActions.toggleStudentEnrollModal());
+    dispatch(fetchOneStudent());
   };
 
   const COLUMNS = [
@@ -57,7 +68,11 @@ const StudentsTable = (props) => {
       id: "actions",
       Header: "Actions",
       Cell: ({ row }) => (
-        <ButtonGroup ID={row.values.id} onDelete={showDltStudentModalHandler} />
+        <ButtonGroup
+          ID={row.values.id}
+          onDelete={showDltStudentModalHandler}
+          onEnroll={showEnrollModalHandler}
+        />
       ),
     },
   ];

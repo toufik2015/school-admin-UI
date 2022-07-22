@@ -25,8 +25,11 @@ function EnrollModalContent(props) {
   } = useForm();
   return (
     <div>
-      <form className={classes["form-box"]}>
-        <Select items={groupsData} />
+      <form
+        onSubmit={handleSubmit(props.onSubmit)}
+        className={classes["form-box"]}
+      >
+        <Select register={register} items={groupsData} name="group" />
         <Input register={register} type="date" name="EnrollDate" />
         <ConfirmButton />
       </form>
@@ -34,7 +37,7 @@ function EnrollModalContent(props) {
   );
 }
 
-function EnrollModal() {
+function EnrollModal(props) {
   return (
     <Fragment>
       {ReactDOM.createPortal(
@@ -43,7 +46,7 @@ function EnrollModal() {
       )}
       {ReactDOM.createPortal(
         <Overlay>
-          <EnrollModalContent />
+          <EnrollModalContent onSubmit={props.onSubmit} />
         </Overlay>,
         document.getElementById("backdrop-root")
       )}

@@ -9,7 +9,7 @@ import ConfirmModal from "../UI/Modal/ConfimModal";
 
 import React from "react";
 
-import { registerStudent } from "../../store/students-slice";
+import { registerStudent, enrollStudent } from "../../store/students-slice";
 import { uiActions } from "../../store/ui-slice";
 import { studentsActions } from "../../store/students-slice";
 import { deleteStudentDb } from "../../store/students-slice";
@@ -21,6 +21,10 @@ const Students = () => {
   const StudentDltModalShow = useSelector(
     (state) => state.ui.showDltStudentModal
   );
+
+  const studentEnrollModalShow = useSelector(
+    (state) => state.ui.showEnrollStudentModal
+  );
   const StudentRegisterModalShow = useSelector(
     (state) => state.ui.showStudentRegisterModal
   );
@@ -30,22 +34,26 @@ const Students = () => {
 
   const showDltStudentModalHandler = (e) => {
     const studentId = e.target.dataset.id;
-    dispatch(studentsActions.setStudentDltId(studentId));
+    dispatch(studentsActions.setStudentId(studentId));
     dispatch(uiActions.toggleStudnetDltModal());
   };
   const showRegisterStudentModalHandler = (e) => {
     e.preventDefault();
-    console.log("here");
     dispatch(uiActions.toggleStudentRegisterModal());
   };
 
+  const enrollStudentHandler = (data) => {
+    dispatch(enrollStudent(data));
+  };
   const submitStudentFormHandler = (data) => {
     dispatch(registerStudent(data));
   };
 
   return (
     <div className={classes.container}>
-      <EnrollModal />
+      {studentEnrollModalShow && (
+        <EnrollModal onSubmit={enrollStudentHandler} />
+      )}
       {StudentRegisterModalShow && (
         <RegisterStudentModal
           onSubmit={submitStudentFormHandler}
