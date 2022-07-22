@@ -3,7 +3,12 @@ import { uiActions } from "./ui-slice";
 
 const studentsSlice = createSlice({
   name: "students",
-  initialState: { studentsList: [], studentId: null, studentDetails: null },
+  initialState: {
+    studentsList: [],
+    studentId: null,
+    studentDetails: null,
+    enrollments: [],
+  },
   reducers: {
     populateStudents(state, action) {
       state.studentsList = action.payload;
@@ -14,6 +19,9 @@ const studentsSlice = createSlice({
 
     assginStudentData(state, action) {
       state.studentDetails = action.payload;
+    },
+    populateEnrollments(state, action) {
+      state.enrollments = action.payload;
     },
     deleteStudent(state, action) {
       const newStudentsList = state.studentsList.filter(
@@ -51,6 +59,7 @@ export const fetchOneStudent = () => {
     const data = await response.json();
 
     dispatch(studentsActions.assginStudentData(data.student));
+    dispatch(studentsActions.populateEnrollments(data.student.enrollments));
   };
 };
 

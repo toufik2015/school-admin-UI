@@ -1,0 +1,18 @@
+.close-btn {
+  padding: 0.8rem;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #999;
+  transition: all 0.3s;
+}
+
+.close-btn:hover {
+  color: #0d54a5;
+}
+
+.close-btn svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
